@@ -1,0 +1,31 @@
+﻿@model CalculatorApp.Models.CalculatorModel
+
+<h2>Simple Calculator</h2>
+
+<form method="post">
+    <div>
+        <label>Number 1:</label>
+        <input type="number" step="any" asp-for="Number1" />
+    </div>
+
+    <div>
+        <label>Number 2:</label>
+        <input type="number" step="any" asp-for="Number2" />
+    </div>
+
+    <div>
+        <label>Choose Operation:</label>
+        <select asp-for="Operator">
+            <option value="Add">Add (+)</option>
+            <option value="Subtract">Subtract (-)</option>
+            <option value="Multiply">Multiply (*)</option>
+            <option value="Divide">Divide (/)</option>
+        </select>
+    </div>
+
+    <button type="submit">Calculate</button>
+
+    <div>
+        <h3>Result: @Model.Result</h3>
+    </div>
+</form>
